@@ -71,6 +71,15 @@ body{
     color: white;
     padding: 8px;
     border-radius: 30px;
+    border: solid black 1.5px;
+    cursor: pointer;
+}
+.categories p:hover{
+    transition: 1s;
+    background-color: transparent;
+    color: #a435f0;
+    border: solid #a435f0 1.5px;
+    transform: scale(1.05);
 }
 .sale-img{
     position: relative;
@@ -86,6 +95,21 @@ body{
     position: absolute;
     top: 10%;
     left: 5%;
+    animation-name: zoom;
+    animation-duration: 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+@keyframes zoom {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+
+    }
 }
 .recomendings{
     padding: 10px;
@@ -122,6 +146,8 @@ body{
 .topics__container p:hover{
     color: white;
     background-color: #a435f0;
+    transition-duration: 1s;
+    transform: scale(1.02);
 }
 .popular{
     padding: 10px;
